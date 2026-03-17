@@ -11,10 +11,10 @@
             align-items: center;
             height: 100vh;
             background: black;
-            color: white;
+            color: green;
         }
         canvas {
-            border: 2px solid white;
+            border: 2px solid green;
         }
     </style>
 </head>
@@ -29,8 +29,8 @@
         let computerPaddleY = (canvas.height - paddleHeight) / 2;
         const ballSize = 10;
         let ballX = canvas.width / 2, ballY = canvas.height / 2;
-        let ballSpeedX = 7, ballSpeedY = 4;
-        let playerScore = 0, computerScore = 0;
+        let ballSpeedX = 7, ballSpeedY = 7;
+        let playerScore = 6, computerScore = 0;
 
         function draw() {
             context.clearRect(0, 0, canvas.width, canvas.height);
@@ -71,9 +71,9 @@
             }
             // Computer AI
             if (ballY > computerPaddleY + paddleHeight / 2) {
-                computerPaddleY += 2;
+                computerPaddleY += 1;
             } else {
-                computerPaddleY -= 2;
+                computerPaddleY -= 1;
             }
             computerPaddleY = Math.max(Math.min(computerPaddleY, canvas.height - paddleHeight), 0);
         }
