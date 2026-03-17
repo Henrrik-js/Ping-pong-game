@@ -71,9 +71,9 @@
             }
             // Computer AI
             if (ballY > computerPaddleY + paddleHeight / 2) {
-                computerPaddleY += 4;
+                computerPaddleY += 2;
             } else {
-                computerPaddleY -= 4;
+                computerPaddleY -= 2;
             }
             computerPaddleY = Math.max(Math.min(computerPaddleY, canvas.height - paddleHeight), 0);
         }
