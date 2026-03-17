@@ -93,11 +93,13 @@ if (playerScore >= 6) {
             ballY = canvas.height / 2;
         }
 
-        function gameLoop() {
-            draw();
-            update();
-            requestAnimationFrame(gameLoop);
-        }
+function gameLoop() {
+    if (gameActive) {
+        draw();
+        update();
+    }
+    requestAnimationFrame(gameLoop);
+}
 
         // Player controls
         document.addEventListener('mousemove', function(event) {
