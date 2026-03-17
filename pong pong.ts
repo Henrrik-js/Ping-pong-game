@@ -31,7 +31,7 @@
         let ballX = canvas.width / 2, ballY = canvas.height / 2;
         let ballSpeedX = 7, ballSpeedY = 7;
         let playerScore = 6, computerScore = 0;
-
+        let gameActive = true; // Controla se o jogo está ativo
         function draw() {
             context.clearRect(0, 0, canvas.width, canvas.height);
             // Draw paddles
