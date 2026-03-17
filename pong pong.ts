@@ -68,6 +68,16 @@
             } else if (ballX > canvas.width) {
                 playerScore++;
                 resetBall();
+// Verificar se alguém atingiu 6 pontos
+if (playerScore >= 6) {
+    gameActive = false;
+    alert("🎉 Player venceu! Pontuação: " + playerScore + " x " + computerScore);
+    location.reload(); // Reinicia o jogo
+} else if (computerScore >= 6) {
+    gameActive = false;
+    alert("🤖 Computer venceu! Pontuação: " + computerScore + " x " + playerScore);
+    location.reload(); // Reinicia o jogo
+}
             }
             // Computer AI
             if (ballY > computerPaddleY + paddleHeight / 2) {
