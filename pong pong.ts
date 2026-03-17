@@ -29,7 +29,7 @@
         let computerPaddleY = (canvas.height - paddleHeight) / 2;
         const ballSize = 10;
         let ballX = canvas.width / 2, ballY = canvas.height / 2;
-        let ballSpeedX = 5, ballSpeedY = 2;
+        let ballSpeedX = 7, ballSpeedY = 4;
         let playerScore = 0, computerScore = 0;
 
         function draw() {
